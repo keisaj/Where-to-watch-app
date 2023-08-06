@@ -1,1 +1,223 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --blue-1: #3f407a;
+    --blue-2: #24188d;
+    --yellow: #FAC742;
+    --white: #FFF;
+    --grey: #EDEDED;
+    --shadow-dark: rgba(0, 0, 0, 0.3);
+    --shadow-light: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--blue-1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    width: 800px;
+    height: 60vh;
+    background-color: var(--blue-2);
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px var(--shadow-dark);
+}
+
+.upper-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: var(--shadow-dark);
+}
+
+.upper-data img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.center-container {
+    display: flex;
+    width: 50%;
+    height: 20%;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    gap: 10px;
+    z-index: 1;
+    background-color: var(--blue-2);
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0.8;
+
+}
+
+.title-container {
+    display: flex;
+    width: 50%;
+    height: 20%;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    gap: 10px;
+    z-index: 1;
+    background-color: var(--blue-1);
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0.9;
+    margin-top: 20px;
+    color: white;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 4;
+}
+
+.dropdown-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.search-container {
+    width: 100%;
+    padding: 10px;
+    border: 1px var(--blue-2);
+    border-radius: 5px;
+}
+
+.search-container input {
+    background-color: var(--shadow-light);
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 1em;
+    color: var(--grey);
+    font-size: 0.8em;
+}
+
+
+.dropdown-container {
+    background-color: var(--shadow-light);
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 1em;
+    color: var(--black);
+    font-size: 0.8em;
+}
+
+.dropdown-container select {
+    background-color: inherit;
+    outline: none;
+    border: none;
+    border-radius: inherit;
+    color: var(--grey);
+}
+
+.dropdown-container option,
+.dropdown-option {
+    padding: 5px;
+    border: 1px solid var(--blue-2);
+    background-color: var(--grey);
+    color: var(--black);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 14px;
+
+}
+
+.dropdown-option:hover {
+    color: var(--black);
+}
+
+.bottom-data {
+    overflow: hidden;
+    width: 100%;
+    height: 50%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: var(--shadow-dark);
+}
+
+.streaming-data {
+    position: relative;
+    justify-content: center;
+    z-index: 1;
+    width: 90%;
+    height: 90%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: var(--shadow-light);
+
+}
+
+.streaming-row {
+    display: flex;
+    justify-content: center;
+    gap: 8em;
+    margin-top: 10px;
+}
+
+.streaming-item {
+    text-align: center;
+}
+
+.streaming-item img {
+    max-width: 100px;
+    height: auto;
+}
+
+.streaming-item p {
+    margin-top: 10px;
+}
+
+footer {
+    background-color: transparent;
+    padding: 10px;
+    text-align: left;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
