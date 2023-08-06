@@ -11,7 +11,6 @@ export class AppComponent implements OnInit {
 
   title: string = "The Witcher";
   foundTitle?: string;
-  foundCountry?: string = "Poland"
   countryCode: string = 'pl';
   countries: any[] = [];
 
@@ -36,8 +35,7 @@ export class AppComponent implements OnInit {
   }
 
   onSelectCountry(event: any) {
-    this.countryCode = event.target.value;
-    this.foundCountry = event.target.value;
+    this.countryCode = event.target.option.value;
   }
 
   private getStreamingData(title: string, countryCode: string) {
