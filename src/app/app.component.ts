@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
   }
 
   onSelectCountry(event: any) {
-    this.countryCode = event.target.option.value;
+    this.countryCode = event.target.value;
   }
 
   private getStreamingData(title: string, countryCode: string) {
@@ -53,5 +53,9 @@ export class AppComponent implements OnInit {
 
   isServiceAvailable(serviceName: string): boolean {
     return this.services?.some(service => service.service === serviceName) ?? false;
+  }
+  getLinkToService(serviceName: string): string {
+    const targetService = this.services?.find(service => service.service === serviceName);
+    return targetService ? targetService.link : '';
   }
 }

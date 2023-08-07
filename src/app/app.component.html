@@ -1,7 +1,7 @@
-<div class="container" >
+<div class="container">
   <!-- *ngIf="streamingData" -->
   <div class="upper-data">
-    <div class="center-container">
+    <div class="input-container">
       <div class="search-container">
         <form #form="ngForm" (submit)="onSubmit()">
           <input class="search" type="text" placeholder="Search Title" name="title" [(ngModel)]="title">
@@ -16,37 +16,51 @@
       </div>
     </div>
     <div class="title-container">
-      <p >{{ foundTitle }}</p>
+      <p>{{ foundTitle }}</p>
     </div>
     <img src="../assets/car_cinema.jpg">
   </div>
   <div class="bottom-data">
     <div class="streaming-data">
       <div class="streaming-row">
-        <div class="streaming-item">
-          <img src="../assets/hbo_max.png">
+        <div class="streaming-item" [ngStyle]="{'background-color': isServiceAvailable('hbo') ? 'green' : 'inherit'}">
+          <a [attr.href]="isServiceAvailable('hbo') ? getLinkToService('hbo') : null">
+            <img src="../assets/hbo_max.png">
+          </a>
           <p>{{ isServiceAvailable('hbo') ? 'Available' : 'Unavailable' }}</p>
         </div>
-        <div class="streaming-item">
-          <img src="../assets/netflix.png">
+        <div class="streaming-item"
+          [ngStyle]="{'background-color': isServiceAvailable('netflix') ? 'var(--grey)' : 'inherit'}">
+          <a [attr.href]="isServiceAvailable('netflix') ? getLinkToService('netflix') : null">
+            <img src="../assets/netflix.png">
+          </a>
           <p>{{ isServiceAvailable('netflix') ? 'Available' : 'Unavailable' }}</p>
         </div>
-        <div class="streaming-item">
-          <img src="../assets/hulu.png">
+        <div class="streaming-item" [ngStyle]="{'background-color': isServiceAvailable('hulu') ? 'green' : 'inherit'}">
+          <a [attr.href]="isServiceAvailable('hulu') ? getLinkToService('hulu') : null">
+            <img src="../assets/hulu.png">
+          </a>
           <p>{{ isServiceAvailable('hulu') ? 'Available' : 'Unavailable' }}</p>
         </div>
       </div>
       <div class="streaming-row">
-        <div class="streaming-item">
-          <img src="../assets/prime_video.png">
+        <div class="streaming-item" [ngStyle]="{'background-color': isServiceAvailable('prime') ? 'green' : 'inherit'}">
+          <a [attr.href]="isServiceAvailable('prime') ? getLinkToService('prime') : null">
+            <img src="../assets/prime_video.png">
+          </a>
           <p>{{ isServiceAvailable('prime') ? 'Available' : 'Unavailable' }}</p>
         </div>
-        <div class="streaming-item">
-          <img src="../assets/disney_plus.png">
+        <div class="streaming-item"
+          [ngStyle]="{'background-color': isServiceAvailable('disney') ? 'green' : 'inherit'}">
+          <a [attr.href]="isServiceAvailable('disney') ? getLinkToService('disney') : null">
+            <img src="../assets/disney_plus.png">
+          </a>
           <p>{{ isServiceAvailable('disney') ? 'Available' : 'Unavailable' }}</p>
         </div>
-        <div class="streaming-item">
-          <img src="../assets/apple_tv.png">
+        <div class="streaming-item" [ngStyle]="{'background-color': isServiceAvailable('apple') ? 'green' : 'inherit'}">
+          <a [attr.href]="isServiceAvailable('apple') ? getLinkToService('apple') : null">
+            <img src="../assets/apple_tv.png">
+          </a>
           <p>{{ isServiceAvailable('apple') ? 'Available' : 'Unavailable' }}</p>
         </div>
       </div>
