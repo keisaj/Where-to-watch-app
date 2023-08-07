@@ -1,7 +1,11 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-src/environments/environment.prod.ts
-src/environments/environment.ts
+/src/environments/
+
+angular.json
+package-lock.json
+
+
 
 # Compiled output
 /dist
@@ -24,11 +28,7 @@ yarn-error.log
 *.sublime-workspace
 
 # Visual Studio Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+.vscode/
 .history/*
 
 # Miscellaneous
