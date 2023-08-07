@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
   services?: Array<CountryCode>
 
   ngOnInit(): void {
-    this.getStreamingData(this.title, this.countryCode);
+    // this.getStreamingData(this.title, this.countryCode);
     this.countries = this.countryService.getCountries();
     this.title = '';
   }
