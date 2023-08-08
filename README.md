@@ -27,7 +27,7 @@ This is a web application that helps you find where your favorite series are ava
 
 ## Contributors
 
-- keisaj
+- Jan Bukała/keisaj
 
 ## License
 
